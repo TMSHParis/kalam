@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer id="contact" className="bg-kalam-950 text-kalam-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr] gap-10 sm:gap-12">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-10">
           <div className="sm:col-span-2 md:col-span-1">
             <Logo variant="light" className="text-5xl" />
             <p className="mt-4 text-sm text-kalam-200/80 max-w-sm leading-relaxed">
@@ -55,18 +55,18 @@ export function Footer() {
             <h4 className="text-xs font-bold tracking-[0.2em] uppercase text-kalam-yellow">
               Horaires
             </h4>
-            <ul className="mt-4 space-y-1.5 text-sm">
-              <li className="flex justify-between gap-4">
-                <span>Lun – Jeu</span>
-                <span className="text-kalam-200/80">11h30 – 23h45</span>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li>
+                <div className="font-semibold text-kalam-100">Lun – Jeu</div>
+                <div className="text-kalam-200/80">11h30 – 23h45</div>
               </li>
-              <li className="flex justify-between gap-4">
-                <span>Vendredi</span>
-                <span className="text-kalam-200/80">18h00 – 23h45</span>
+              <li>
+                <div className="font-semibold text-kalam-100">Vendredi</div>
+                <div className="text-kalam-200/80">18h00 – 23h45</div>
               </li>
-              <li className="flex justify-between gap-4">
-                <span>Sam – Dim</span>
-                <span className="text-kalam-200/80">11h30 – 23h45</span>
+              <li>
+                <div className="font-semibold text-kalam-100">Sam – Dim</div>
+                <div className="text-kalam-200/80">11h30 – 23h45</div>
               </li>
             </ul>
           </div>
