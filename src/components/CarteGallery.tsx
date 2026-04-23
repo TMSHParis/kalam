@@ -9,7 +9,7 @@ const pages = [
 
 export function CarteGallery() {
   return (
-    <section className="bg-kalam-950 text-white py-20 sm:py-24 overflow-hidden relative">
+    <section className="bg-kalam-950 text-white py-14 sm:py-20 lg:py-24 overflow-hidden relative">
       <div
         className="pointer-events-none absolute inset-0 opacity-30"
         style={{
@@ -23,17 +23,17 @@ export function CarteGallery() {
           <span className="inline-block rounded-full bg-white/10 border border-white/20 px-3 py-1 text-xs font-bold tracking-[0.18em] uppercase text-kalam-yellow">
             La carte en images
           </span>
-          <h2 className="mt-4 text-4xl sm:text-5xl font-black tracking-tight">
+          <h2 className="mt-4 text-3xl sm:text-5xl font-black tracking-tight">
             Feuilletez notre
             <br />
             flyer comme en boutique.
           </h2>
-          <p className="mt-4 text-kalam-100/80 text-lg">
+          <p className="mt-4 text-kalam-100/80 text-base sm:text-lg">
             Les 4 pages du flyer Kalam, en haute résolution. Zoomez pour tout voir.
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="mt-10 sm:mt-12 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {pages.map((page) => (
             <a
               key={page.src}

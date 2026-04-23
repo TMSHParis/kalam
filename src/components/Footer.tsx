@@ -4,15 +4,15 @@ import { Logo } from "./Logo";
 export function Footer() {
   return (
     <footer id="contact" className="bg-kalam-950 text-kalam-100">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-[1.4fr_1fr_1fr] gap-12">
-          <div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid sm:grid-cols-2 md:grid-cols-[1.4fr_1fr_1fr] gap-10 sm:gap-12">
+          <div className="sm:col-span-2 md:col-span-1">
             <Logo variant="light" className="text-5xl" />
             <p className="mt-4 text-sm text-kalam-200/80 max-w-sm leading-relaxed">
               Restaurant halal à Montgeron. Sandwichs, burgers, toasts et
               formules. Fait minute, viandes halal.
             </p>
-            <div className="mt-6 flex gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href={restaurant.phoneHref}
                 className="inline-flex items-center gap-2 rounded-full bg-kalam-600 hover:bg-kalam-500 px-5 py-2.5 text-sm font-bold text-white transition-colors"

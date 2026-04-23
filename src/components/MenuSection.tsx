@@ -3,18 +3,18 @@ import { ProductCard } from "./ProductCard";
 
 export function MenuSection() {
   return (
-    <section id="menu" className="bg-white py-20 sm:py-28">
+    <section id="menu" className="bg-white py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <span className="inline-block rounded-full bg-kalam-100 px-3 py-1 text-xs font-bold tracking-[0.18em] uppercase text-kalam-700">
             La Carte
           </span>
-          <h2 className="mt-4 text-4xl sm:text-5xl font-black text-kalam-950 tracking-tight">
+          <h2 className="mt-4 text-3xl sm:text-5xl font-black text-kalam-950 tracking-tight">
             Tout ce qu'on fait,
             <br />
             on le fait <span className="text-kalam-600">minute</span>.
           </h2>
-          <p className="mt-4 text-kalam-700/80 text-lg">
+          <p className="mt-4 text-kalam-700/80 text-base sm:text-lg">
             Viandes halal, frites maison. Commandez au comptoir, à emporter ou
             via Uber Eats.
           </p>
@@ -35,20 +35,20 @@ export function MenuSection() {
           ))}
         </nav>
 
-        <div className="mt-14 space-y-20">
+        <div className="mt-10 sm:mt-14 space-y-14 sm:space-y-20">
           {categories.map((cat) => (
             <div key={cat.id} id={cat.id} className="scroll-mt-24">
-              <div className="flex items-end justify-between gap-6 mb-8">
-                <div>
-                  <h3 className="text-3xl sm:text-4xl font-black text-kalam-900 tracking-tight">
-                    <span className="mr-3">{cat.emoji}</span>
+              <div className="flex items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
+                <div className="min-w-0">
+                  <h3 className="text-2xl sm:text-4xl font-black text-kalam-900 tracking-tight">
+                    <span className="mr-2 sm:mr-3">{cat.emoji}</span>
                     {cat.title}
                   </h3>
                   {cat.subtitle && (
-                    <p className="mt-1.5 text-kalam-700/70">{cat.subtitle}</p>
+                    <p className="mt-1.5 text-sm sm:text-base text-kalam-700/70">{cat.subtitle}</p>
                   )}
                 </div>
-                <span className="hidden sm:inline text-sm text-kalam-500 font-medium">
+                <span className="hidden sm:inline text-sm text-kalam-500 font-medium shrink-0">
                   {cat.products.length} produit{cat.products.length > 1 ? "s" : ""}
                 </span>
               </div>
@@ -62,8 +62,8 @@ export function MenuSection() {
           ))}
         </div>
 
-        <div className="mt-20 grid lg:grid-cols-2 gap-6">
-          <div className="rounded-3xl bg-kalam-50 border border-kalam-100 p-8">
+        <div className="mt-14 sm:mt-20 grid lg:grid-cols-2 gap-6">
+          <div className="rounded-3xl bg-kalam-50 border border-kalam-100 p-6 sm:p-8">
             <h4 className="text-xl font-black text-kalam-900">Suppléments</h4>
             <p className="mt-1 text-sm text-kalam-700/70">
               Personnalisez votre sandwich ou burger.
@@ -85,7 +85,7 @@ export function MenuSection() {
             </ul>
           </div>
 
-          <div className="rounded-3xl brush-card text-white p-8">
+          <div className="rounded-3xl brush-card text-white p-6 sm:p-8">
             <h4 className="text-xl font-black">Nos sauces</h4>
             <p className="mt-1 text-sm text-kalam-100/80">
               14 sauces à choisir · offertes avec chaque commande.

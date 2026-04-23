@@ -2,14 +2,14 @@ import { restaurant } from "@/lib/restaurant";
 
 export function InfoSection() {
   return (
-    <section id="infos" className="bg-kalam-50 py-20 sm:py-28">
+    <section id="infos" className="bg-kalam-50 py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10">
           <div>
             <span className="inline-block rounded-full bg-kalam-100 px-3 py-1 text-xs font-bold tracking-[0.18em] uppercase text-kalam-700">
               Nous trouver
             </span>
-            <h2 className="mt-4 text-4xl sm:text-5xl font-black text-kalam-950 tracking-tight">
+            <h2 className="mt-4 text-3xl sm:text-5xl font-black text-kalam-950 tracking-tight">
               En plein centre
               <br />
               de <span className="text-kalam-600">Montgeron</span>.
@@ -41,8 +41,8 @@ export function InfoSection() {
           </div>
 
           <div>
-            <div className="rounded-3xl bg-white border border-kalam-100 p-8 shadow-sm">
-              <div className="flex items-center justify-between">
+            <div className="rounded-3xl bg-white border border-kalam-100 p-6 sm:p-8 shadow-sm">
+              <div className="flex items-center justify-between gap-3 flex-wrap">
                 <h3 className="text-xl font-black text-kalam-900">Horaires</h3>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-green-50 text-green-700 border border-green-200 px-3 py-1 text-xs font-semibold">
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
@@ -98,15 +98,15 @@ function InfoRow({
   action: string;
 }) {
   return (
-    <div className="flex items-start gap-4 rounded-2xl bg-white border border-kalam-100 p-5">
-      <div className="shrink-0 w-11 h-11 rounded-xl bg-kalam-600 text-white flex items-center justify-center">
+    <div className="flex items-start gap-3 sm:gap-4 rounded-2xl bg-white border border-kalam-100 p-4 sm:p-5">
+      <div className="shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-kalam-600 text-white flex items-center justify-center">
         {icon}
       </div>
       <div className="flex-1 min-w-0">
         <div className="text-xs font-bold tracking-wider uppercase text-kalam-500">
           {title}
         </div>
-        <div className="mt-0.5 text-kalam-900 font-semibold truncate">
+        <div className="mt-0.5 text-sm sm:text-base text-kalam-900 font-semibold truncate">
           {value}
         </div>
       </div>
@@ -114,7 +114,7 @@ function InfoRow({
         href={href}
         target={href.startsWith("http") ? "_blank" : undefined}
         rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-        className="self-center rounded-full border border-kalam-200 text-kalam-700 hover:bg-kalam-50 px-4 py-2 text-xs font-semibold"
+        className="self-center shrink-0 rounded-full border border-kalam-200 text-kalam-700 hover:bg-kalam-50 px-3 sm:px-4 py-2 text-xs font-semibold"
       >
         {action}
       </a>

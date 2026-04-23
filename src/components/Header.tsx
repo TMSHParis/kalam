@@ -35,6 +35,13 @@ export function Header() {
         <div className="flex items-center gap-2">
           <a
             href={restaurant.phoneHref}
+            aria-label={`Appeler ${restaurant.phone}`}
+            className="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-kalam-200 text-kalam-700 hover:bg-kalam-50 transition-colors"
+          >
+            <PhoneIcon className="w-4 h-4" />
+          </a>
+          <a
+            href={restaurant.phoneHref}
             className="hidden sm:inline-flex items-center gap-2 rounded-full border border-kalam-200 px-4 py-2 text-sm font-semibold text-kalam-700 hover:bg-kalam-50 transition-colors"
           >
             <PhoneIcon className="w-4 h-4" />
@@ -42,7 +49,7 @@ export function Header() {
           </a>
           <a
             href="#menu"
-            className="inline-flex items-center rounded-full bg-kalam-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-kalam-700 transition-colors shadow-sm"
+            className="inline-flex items-center rounded-full bg-kalam-600 px-4 sm:px-5 py-2.5 text-sm font-semibold text-white hover:bg-kalam-700 transition-colors shadow-sm"
           >
             Commander
           </a>
