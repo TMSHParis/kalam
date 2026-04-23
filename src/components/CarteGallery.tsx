@@ -4,7 +4,7 @@ const pages = [
   { src: "/carte-page-7723.jpg", label: "Couverture", alt: "Flyer Kalam — couverture avec le sandwich signature" },
   { src: "/carte-page-7724.jpg", label: "Sandwichs", alt: "Page Nos Sandwichs — 17 recettes signature" },
   { src: "/carte-page-7725.jpg", label: "Burgers & Compose", alt: "Page Compose ton sandwich et Nos Burgers" },
-  { src: "/carte-page-7726.jpg", label: "Menus & Tacos", alt: "Page Menu étudiant, Tacos, Tenders et Desserts" },
+  { src: "/carte-page-7726.jpg", label: "Menus & Toasts", alt: "Page Menu étudiant, Toasts, Tenders et Desserts" },
 ];
 
 export function CarteGallery() {

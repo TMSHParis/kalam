@@ -59,7 +59,7 @@ export const burgers: Product[] = [
   { id: "big-burger", name: "Big Burger", description: "2 steaks, cheddar", sizes: seulMenu(8, 9), emoji: "🍔" },
 ];
 
-export const tacos: Product[] = [
+export const toasts: Product[] = [
   { id: "t1", name: "T1", description: "2 steaks, fromage", price: 8, emoji: "🥪" },
   { id: "t2", name: "T2", description: "4 steaks, fromage", price: 9.5, emoji: "🥪" },
   { id: "t-max", name: "T-Max", description: "6 steaks, fromage", price: 11, emoji: "🥪" },
@@ -159,7 +159,7 @@ export const categories: MenuCategory[] = [
   { id: "formules", title: "Formules", subtitle: "Menus étudiant, enfant et compose ton sandwich", emoji: "🎯", products: menusFormules },
   { id: "sandwichs", title: "Sandwichs", subtitle: "20 recettes signature · prix Seul ou Menu (frites + boisson)", emoji: "🥙", products: sandwichs },
   { id: "burgers", title: "Burgers", subtitle: "Smash, Big, Chicken et spécialités maison", emoji: "🍔", products: burgers },
-  { id: "tacos", title: "Tacos", subtitle: "Chauds et fondants · de T1 à T-Max", emoji: "🌯", products: tacos },
+  { id: "toasts", title: "Toasts", subtitle: "Chauds et fondants · de T1 à T-Max", emoji: "🥪", products: toasts },
   { id: "snacks", title: "Snacks", subtitle: "Tenders et nuggets · x4, x6 ou x9", emoji: "🍗", products: snacks },
   { id: "desserts", title: "Desserts", subtitle: "Tiramisu maison et tarte au Daim", emoji: "🍰", products: desserts },
 ];

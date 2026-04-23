@@ -1,6 +1,6 @@
 export const restaurant = {
   name: "Kalam",
-  tagline: "Sandwichs, Burgers & Tacos — Halal à Montgeron",
+  tagline: "Sandwichs, Burgers & Toasts — Halal à Montgeron",
   address: {
     street: "42 Avenue de la République",
     city: "Montgeron",

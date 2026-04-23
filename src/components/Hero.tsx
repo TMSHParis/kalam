@@ -21,7 +21,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg text-kalam-100/90">
-              17 sandwichs signature, burgers gourmet, tacos XL et formules
+              20 sandwichs signature, burgers gourmet, toasts chauds et formules
               imbattables. Fait minute, chez{" "}
               <span className="font-[family-name:var(--font-display)] text-2xl text-white align-middle">
                 Kalam

@@ -17,23 +17,23 @@ const pacifico = Pacifico({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kalam Montgeron — Sandwichs, Burgers & Tacos Halal",
+    default: "Kalam Montgeron — Sandwichs, Burgers & Toasts Halal",
     template: "%s · Kalam Montgeron",
   },
   description:
-    "Kalam, restaurant halal à Montgeron (91230). Sandwichs signature, burgers, tacos, menus étudiant et enfant. Sur place, à emporter ou Uber Eats.",
+    "Kalam, restaurant halal à Montgeron (91230). Sandwichs signature, burgers, toasts, menus étudiant et enfant. Sur place, à emporter ou Uber Eats.",
   keywords: [
     "Kalam",
     "restaurant Montgeron",
     "halal Montgeron",
     "sandwich Montgeron",
     "burger Montgeron",
-    "tacos Montgeron",
+    "toast Montgeron",
     "kebab 91230",
     "Uber Eats Montgeron",
   ],
   openGraph: {
-    title: "Kalam Montgeron — Sandwichs, Burgers & Tacos",
+    title: "Kalam Montgeron — Sandwichs, Burgers & Toasts",
     description:
       "Restaurant halal à Montgeron. Carte signature, formules et livraison Uber Eats.",
     locale: "fr_FR",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kalam Montgeron",
-    description: "Sandwichs, burgers et tacos halal à Montgeron.",
+    description: "Sandwichs, burgers et toasts halal à Montgeron.",
   },
   alternates: { canonical: "/" },
   icons: { icon: "/favicon.ico" },
@@ -59,7 +59,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   name: restaurant.name,
-  servesCuisine: ["Sandwichs", "Burgers", "Tacos", "Halal"],
+  servesCuisine: ["Sandwichs", "Burgers", "Toasts", "Halal"],
   telephone: restaurant.phone,
   address: {
     "@type": "PostalAddress",
