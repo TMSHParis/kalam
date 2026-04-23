@@ -132,7 +132,7 @@ function HeroVisual() {
             <div className="text-[10px] font-bold uppercase tracking-wider">
               dès
             </div>
-            <div className="text-2xl font-black leading-none">8€</div>
+            <div className="text-2xl font-black leading-none">9,50€</div>
           </div>
         </div>
       </div>
