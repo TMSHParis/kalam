@@ -6,6 +6,8 @@ export type Product = {
   sizes?: Size[];
   price?: number;
   badge?: "new" | "student";
+  emoji?: string;
+  image?: string;
 };
 
 export type MenuCategory = {
@@ -16,99 +18,148 @@ export type MenuCategory = {
   products: Product[];
 };
 
+const seulMenu = (seul: number, menu: number): Size[] => [
+  { label: "Seul", price: seul },
+  { label: "Menu", price: menu },
+];
+
 export const sandwichs: Product[] = [
-  { id: "savoureux", name: "Savoureux", description: "Escalope panée, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "radikool", name: "Radikool", description: "Steak tandoori, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "farmer", name: "Farmer", description: "Steak, bacon, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "special", name: "Special", description: "Steak, galette de pomme de terre, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "delice", name: "Délice", description: "Poulet curry mariné, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "tandoori", name: "Tandoori", description: "Poulet tandoori, cheddar", sizes: [{ label: "M", price: 8 }, { label: "L", price: 9 }] },
-  { id: "chicken-mix", name: "Chicken Mix", description: "Poulet tandoori, chicken curry, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "supreme-tandoori", name: "Suprême Tandoori", description: "Steak tandoori, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "escalope", name: "Escalope", description: "Escalope, cheddar", sizes: [{ label: "M", price: 8 }, { label: "L", price: 9 }] },
-  { id: "steak-zinger", name: "Steak Zinger", description: "Steak épicé, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }], badge: "new" },
-  { id: "buffalo", name: "Buffalo", description: "Poulet buffalo, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "escalope-viennoise", name: "Escalope Viennoise", description: "Escalope viennoise, cheddar", sizes: [{ label: "M", price: 7 }, { label: "L", price: 8.5 }] },
-  { id: "steak", name: "Steak", description: "Double steak, cheddar", sizes: [{ label: "M", price: 7 }, { label: "L", price: 8.5 }] },
-  { id: "kebab", name: "Kebab", description: "Émincé de kebab", sizes: [{ label: "M", price: 7 }, { label: "L", price: 8.5 }] },
-  { id: "supreme-curry", name: "Suprême Curry", description: "Chicken curry, steak, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "mix", name: "Mix", description: "Kebab, 2 viandes au choix, cheddar", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
-  { id: "mytik", name: "Mytik", description: "Spécialité maison", sizes: [{ label: "M", price: 9.5 }, { label: "L", price: 10 }] },
+  { id: "savoureux", name: "Savoureux", description: "Escalope, steak, cheddar", sizes: seulMenu(9, 10), emoji: "🥙" },
+  { id: "radikool", name: "Radikool", description: "Escalope, cordon bleu, cheddar", sizes: seulMenu(9.5, 10.5), emoji: "🥙" },
+  { id: "steak-zinger", name: "Steak Zinger", description: "Steak, filet de poulet mariné, cheddar", sizes: seulMenu(9.5, 10.5), emoji: "🥩", badge: "new" },
+  { id: "mytik", name: "Mytik", description: "Chicken spécial, steak, cheddar", sizes: seulMenu(9, 10), emoji: "🥙" },
+  { id: "farmer", name: "Farmer", description: "Steak, jambon, chorizo, cheddar", sizes: seulMenu(9, 10), emoji: "🥓" },
+  { id: "special", name: "Spécial", description: "Poulet marinade spécial, cheddar", sizes: seulMenu(8.5, 9.5), emoji: "🍗" },
+  { id: "buffalo", name: "Buffalo", description: "3 steaks, bacon, cheddar", sizes: seulMenu(9, 10), emoji: "🥩" },
+  { id: "radikal", name: "Radikal", description: "Steak, cordon bleu, cheddar", sizes: seulMenu(9, 10), emoji: "🥙" },
+  { id: "delice", name: "Délice", description: "Escalope, bacon, cheddar", sizes: seulMenu(9, 10), emoji: "🥓" },
+  { id: "curry", name: "Curry", description: "Poulet curry mariné, cheddar", sizes: seulMenu(8.5, 9.5), emoji: "🍛" },
+  { id: "escalope-viennoise", name: "Escalope Viennoise", description: "Escalope panée, cheddar", sizes: seulMenu(7.5, 8.5), emoji: "🥪" },
+  { id: "savoyard", name: "Savoyard", description: "Steak, lardon, p. de terre, crème fraîche, raclette", sizes: seulMenu(9.5, 10.5), emoji: "🧀" },
+  { id: "tandoori", name: "Tandoori", description: "Poulet tandoori mariné, cheddar", sizes: seulMenu(8.5, 9.5), emoji: "🍗" },
+  { id: "chicken-mix", name: "Chicken Mix", description: "Chicken tandoori, chicken curry, cheddar", sizes: seulMenu(9.5, 10.5), emoji: "🍗" },
+  { id: "steak", name: "Steak", description: "Double steak, cheddar", sizes: seulMenu(7.5, 8.5), emoji: "🥩" },
+  { id: "kebab", name: "Kebab", description: "Émincé de kebab", sizes: seulMenu(7.5, 8.5), emoji: "🌯" },
+  { id: "escalope", name: "Escalope", description: "Escalope, cheddar", sizes: seulMenu(8.5, 9.5), emoji: "🥪" },
+  { id: "supreme-tandoori", name: "Suprême Tandoori", description: "Chicken tandoori, steak, cheddar", sizes: seulMenu(9, 10), emoji: "🍗" },
+  { id: "mix", name: "Mix", description: "Kebab, 1 viande au choix, cheddar", sizes: seulMenu(9, 10), emoji: "🌯" },
+  { id: "supreme-curry", name: "Suprême Curry", description: "Chicken curry, steak, cheddar", sizes: seulMenu(9, 10), emoji: "🍛" },
 ];
 
 export const burgers: Product[] = [
-  { id: "double-cheese", name: "Double Cheese", description: "2 steaks, cheddar", sizes: [{ label: "M", price: 7 }, { label: "L", price: 8 }] },
-  { id: "royal-bacon", name: "Royal Bacon", description: "2 steaks, bacon, cheddar", sizes: [{ label: "M", price: 7.5 }, { label: "L", price: 8 }] },
-  { id: "country", name: "Country", description: "2 steaks, galette de pomme de terre, cheddar", sizes: [{ label: "M", price: 8 }, { label: "L", price: 9 }] },
-  { id: "big-one", name: "Big One", description: "1 steak 180g, cheddar", sizes: [{ label: "M", price: 9 }, { label: "L", price: 10 }] },
-  { id: "big-two", name: "Big Two", description: "2 steaks 180g, cheddar", sizes: [{ label: "M", price: 10 }, { label: "L", price: 11 }] },
-  { id: "big-up", name: "Big Up", description: "3 steaks 180g, cheddar", sizes: [{ label: "M", price: 11 }, { label: "L", price: 12 }] },
-  { id: "big-burger", name: "Big Burger", description: "2 steaks, cheddar", sizes: [{ label: "M", price: 8 }, { label: "L", price: 9 }] },
-  { id: "chicken-burger", name: "Chicken Burger", description: "Poulet pané, cheddar", sizes: [{ label: "M", price: 7 }, { label: "L", price: 8 }] },
-  { id: "le-k-burger", name: "Le K Burger", description: "Filet de poulet pané, bacon, cheddar", sizes: [{ label: "M", price: 8 }, { label: "L", price: 9 }] },
-  { id: "smash-k", name: "Smash K", description: "Steak gourmet 175g, cheddar", sizes: [{ label: "M", price: 9 }, { label: "L", price: 10 }], badge: "new" },
+  { id: "double-cheese", name: "Double Cheese", description: "2 steaks, cheddar", sizes: seulMenu(7, 8), emoji: "🍔" },
+  { id: "smash-k", name: "Smash K", description: "Steak gourmet 65g, cheddar, sauce spécial", sizes: seulMenu(9, 10), emoji: "🍔", badge: "new" },
+  { id: "royal-bacon", name: "Royal Bacon", description: "2 steaks, bacon, cheddar", sizes: seulMenu(7.5, 8.5), emoji: "🥓" },
+  { id: "country", name: "Country", description: "2 steaks, galette de pomme de terre, cheddar", sizes: seulMenu(8.5, 9.5), emoji: "🥔" },
+  { id: "chicken-burger", name: "Chicken Burger", description: "Poulet pané, cheddar", sizes: seulMenu(7.5, 8.5), emoji: "🍗" },
+  { id: "le-k-burger", name: "Le K Burger", description: "Filet de poulet mariné et pané, cheddar", sizes: seulMenu(8, 9), emoji: "🍗" },
+  { id: "big-up", name: "Big Up", description: "3 steaks 180g, cheddar", sizes: seulMenu(11.5, 12.5), emoji: "🍔" },
+  { id: "big-two", name: "Big Two", description: "2 steaks 180g, cheddar", sizes: seulMenu(10.5, 11.5), emoji: "🍔" },
+  { id: "big-one", name: "Big One", description: "1 steak 180g, cheddar", sizes: seulMenu(9.5, 10.5), emoji: "🍔" },
+  { id: "big-burger", name: "Big Burger", description: "2 steaks, cheddar", sizes: seulMenu(8, 9), emoji: "🍔" },
 ];
 
 export const tacos: Product[] = [
-  { id: "t1", name: "T1", description: "2 steaks, fromage", sizes: [{ label: "M", price: 8 }, { label: "L", price: 9 }, { label: "XL", price: 9.5 }] },
-  { id: "t2", name: "T2", description: "2 steaks, fromage", sizes: [{ label: "M", price: 8.5 }, { label: "L", price: 9.5 }] },
-  { id: "t-max", name: "T-Max", description: "4 steaks, fromage", sizes: [{ label: "XL", price: 11 }], badge: "new" },
-  { id: "croq-mr", name: "Croq Mr", description: "Croque-monsieur chaud", sizes: [{ label: "M", price: 7.5 }, { label: "L", price: 9.5 }] },
+  { id: "t1", name: "T1", description: "2 steaks, fromage", price: 8, emoji: "🥪" },
+  { id: "t2", name: "T2", description: "4 steaks, fromage", price: 9.5, emoji: "🥪" },
+  { id: "t-max", name: "T-Max", description: "6 steaks, fromage", price: 11, emoji: "🥪" },
+  { id: "croq-mr", name: "Croq Mr", description: "Dinde, fromage", price: 7.5, emoji: "🧀" },
 ];
 
 export const snacks: Product[] = [
-  { id: "tenders", name: "Tenders", description: "Filets de poulet panés", sizes: [{ label: "x3", price: 3.5 }, { label: "x5", price: 6.5 }, { label: "x7", price: 9 }] },
-  { id: "nuggets", name: "Nuggets", description: "Nuggets de poulet", sizes: [{ label: "x3", price: 3 }, { label: "x5", price: 7.5 }, { label: "x7", price: 9.5 }] },
-  { id: "dinde-fromage", name: "Dinde fromage", description: "Chaud, fondant", price: 6.5 },
-  { id: "pate-jambon", name: "Pâté au jambon", description: "À la découpe", price: 3 },
+  {
+    id: "tenders",
+    name: "Tenders",
+    description: "Filets de poulet panés",
+    sizes: [
+      { label: "x4", price: 7 },
+      { label: "x6", price: 8 },
+      { label: "x9", price: 9 },
+    ],
+    emoji: "🍗",
+    badge: "new",
+  },
+  {
+    id: "nuggets",
+    name: "Nuggets",
+    description: "Nuggets de poulet",
+    sizes: [
+      { label: "x4", price: 6.5 },
+      { label: "x6", price: 7.5 },
+      { label: "x9", price: 9.5 },
+    ],
+    emoji: "🐔",
+  },
 ];
 
 export const menusFormules: Product[] = [
-  { id: "menu-etudiant", name: "Menu Étudiant", description: "Sandwich au choix + frites + boisson · sauf dimanche et vacances", price: 6.5, badge: "student" },
-  { id: "menu-enfant", name: "Menu Enfant", description: "Cheeseburger ou 4 nuggets + frites + boisson", price: 6.5 },
-  { id: "compose", name: "Compose ton sandwich", description: "Pain maison ou tortilla · 2 viandes au choix · suppléments possibles", price: 11, badge: "new" },
+  {
+    id: "menu-etudiant",
+    name: "Menu Étudiant",
+    description: "Sandwich au choix + frites + boisson · entre 11h30–14h30 sauf dimanche et vacances",
+    price: 6.5,
+    badge: "student",
+    emoji: "🎓",
+  },
+  {
+    id: "menu-enfant",
+    name: "Menu Enfant",
+    description: "Cheeseburger ou nuggets x4 + frites + boisson",
+    price: 6.5,
+    emoji: "🧒",
+  },
+  {
+    id: "compose",
+    name: "Compose ton sandwich",
+    description: "Pain maison ou tortilla · 2 viandes au choix · suppléments possibles",
+    price: 11,
+    badge: "new",
+    emoji: "🥖",
+  },
 ];
 
 export const desserts: Product[] = [
-  { id: "tiramisu-passion", name: "Tiramisu Passion", price: 3 },
-  { id: "tiramisu-mangue", name: "Tiramisu Mangue", price: 3 },
+  { id: "tiramisu-mangue", name: "Tiramisu Mangue", price: 3.5, emoji: "🥭" },
+  { id: "tiramisu-maison", name: "Tiramisu Maison", price: 3.5, emoji: "🍮" },
+  { id: "tarte-daim", name: "Tarte au Daim", price: 2.5, emoji: "🍫" },
 ];
 
 export const supplements = [
+  { name: "Lardon", price: 1.2 },
+  { name: "Raclette", price: 1.2 },
+  { name: "Galette de pomme de terre", price: 1.2 },
+  { name: "Boursin", price: 1 },
+  { name: "Jambon", price: 1 },
+  { name: "Cheddar", price: 1 },
+  { name: "Œuf", price: 1 },
+  { name: "Bacon", price: 1 },
+  { name: "Chorizo", price: 1 },
   { name: "Viande supp", price: 2.5 },
   { name: "Steak Big", price: 3.5 },
-  { name: "Cheddar", price: 1 },
-  { name: "Galette de pomme de terre", price: 1.2 },
-  { name: "Lardon", price: null },
-  { name: "Raclette", price: null },
-  { name: "Jambon", price: null },
-  { name: "Bacon", price: null },
-  { name: "Boursin", price: null },
-  { name: "Œuf", price: null },
-  { name: "Chorizo", price: null },
 ] as const;
 
 export const sauces = [
   "Poivre",
   "Chili Thaï",
-  "Samouraï",
+  "Andalouse",
   "Blanche",
   "Fish",
-  "Cheezy",
+  "Cheesy",
   "Harissa",
   "Barbecue",
   "Algérienne",
   "Mayonnaise",
   "Ketchup",
+  "Samouraï",
   "Moutarde",
-  "Bigy",
+  "Biggy",
 ] as const;
 
 export const categories: MenuCategory[] = [
   { id: "formules", title: "Formules", subtitle: "Menus étudiant, enfant et compose ton sandwich", emoji: "🎯", products: menusFormules },
-  { id: "sandwichs", title: "Sandwichs", subtitle: "17 recettes signature · tailles M et L", emoji: "🥙", products: sandwichs },
+  { id: "sandwichs", title: "Sandwichs", subtitle: "20 recettes signature · prix Seul ou Menu (frites + boisson)", emoji: "🥙", products: sandwichs },
   { id: "burgers", title: "Burgers", subtitle: "Smash, Big, Chicken et spécialités maison", emoji: "🍔", products: burgers },
-  { id: "tacos", title: "Tacos", subtitle: "Chauds et fondants · du M au XL", emoji: "🌯", products: tacos },
-  { id: "snacks", title: "Snacks", subtitle: "Tenders, nuggets et à la découpe", emoji: "🍗", products: snacks },
-  { id: "desserts", title: "Desserts", subtitle: "Tiramisu maison", emoji: "🍰", products: desserts },
+  { id: "tacos", title: "Tacos", subtitle: "Chauds et fondants · de T1 à T-Max", emoji: "🌯", products: tacos },
+  { id: "snacks", title: "Snacks", subtitle: "Tenders et nuggets · x4, x6 ou x9", emoji: "🍗", products: snacks },
+  { id: "desserts", title: "Desserts", subtitle: "Tiramisu maison et tarte au Daim", emoji: "🍰", products: desserts },
 ];
