@@ -10,7 +10,7 @@ export function Footer() {
             <Logo variant="light" className="text-5xl" />
             <p className="mt-4 text-sm text-kalam-200/80 max-w-sm leading-relaxed">
               Restaurant halal à Montgeron. Sandwichs, burgers, tacos et
-              formules. Fait minute, viandes halal, sauces maison.
+              formules. Fait minute, viandes halal.
             </p>
             <div className="mt-6 flex gap-3">
               <a

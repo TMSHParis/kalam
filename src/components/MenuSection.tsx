@@ -15,8 +15,8 @@ export function MenuSection() {
             on le fait <span className="text-kalam-600">minute</span>.
           </h2>
           <p className="mt-4 text-kalam-700/80 text-lg">
-            Viandes halal, frites maison, sauces fait maison. Commandez au
-            comptoir, à emporter ou via Uber Eats.
+            Viandes halal, frites maison. Commandez au comptoir, à emporter ou
+            via Uber Eats.
           </p>
         </div>
 
@@ -86,9 +86,9 @@ export function MenuSection() {
           </div>
 
           <div className="rounded-3xl brush-card text-white p-8">
-            <h4 className="text-xl font-black">Sauces maison</h4>
+            <h4 className="text-xl font-black">Nos sauces</h4>
             <p className="mt-1 text-sm text-kalam-100/80">
-              13 sauces à choisir · offertes avec chaque commande.
+              14 sauces à choisir · offertes avec chaque commande.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               {sauces.map((sauce) => (
